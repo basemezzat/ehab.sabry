@@ -7,7 +7,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #ffffff 0%, #0919a5 100%);
@@ -91,7 +90,7 @@
         .header-section {
             background: var(--secondary-gradient);
             color: white;
-            padding: 80px 0;
+            padding: 60px 0 80px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -127,8 +126,8 @@
         }
         
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             border: 6px solid rgba(255,255,255,0.3);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
@@ -151,7 +150,7 @@
         .name-title {
             position: relative;
             z-index: 2;
-            margin-top: 30px;
+            margin-top: 25px;
             animation: slideInUp 1s ease-out 0.3s both;
         }
 
@@ -161,7 +160,7 @@
         }
         
         .name-title h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 15px;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
@@ -178,7 +177,7 @@
         }
         
         .name-title h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 400;
             opacity: 0.9;
             letter-spacing: 1px;
@@ -186,16 +185,16 @@
 
         /* Enhanced Content Sections */
         .content-section {
-            padding: 80px 40px;
+            padding: 60px 20px;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         
         .section-card {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
             border-radius: var(--border-radius);
-            padding: 40px;
-            margin-bottom: 40px;
+            padding: 30px;
+            margin-bottom: 30px;
             box-shadow: var(--card-shadow);
             transition: var(--transition);
             border: 1px solid rgba(255,255,255,0.2);
@@ -219,7 +218,7 @@
         }
 
         .section-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-8px) scale(1.01);
             box-shadow: var(--hover-shadow);
             border-color: rgba(102, 126, 234, 0.3);
         }
@@ -229,22 +228,22 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             position: relative;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 0;
-            width: 60px;
-            height: 4px;
+            width: 50px;
+            height: 3px;
             background: var(--success-gradient);
             border-radius: 2px;
             animation: expandLine 0.8s ease-out;
@@ -252,7 +251,7 @@
 
         @keyframes expandLine {
             0% { width: 0; }
-            100% { width: 60px; }
+            100% { width: 50px; }
         }
         
         .section-title i {
@@ -260,7 +259,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             animation: iconBounce 2s ease-in-out infinite;
         }
 
@@ -273,13 +272,14 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-bottom: 18px;
             padding: 15px;
-            border-radius: 15px;
+            border-radius: 12px;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .contact-item::before {
@@ -301,23 +301,24 @@
         }
 
         .contact-item:hover {
-            transform: translateX(10px);
+            transform: translateX(8px);
             color: #333;
         }
         
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: var(--success-gradient);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .contact-icon::before {
@@ -347,17 +348,18 @@
             display: inline-block;
             background: var(--warning-gradient);
             color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            margin: 8px;
-            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 6px;
+            font-size: 13px;
             font-weight: 600;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            text-align: center;
         }
 
         .skill-tag::before {
@@ -376,21 +378,26 @@
         }
 
         .skill-tag:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         /* Advanced Hobby Items */
         .hobby-item {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             border-radius: var(--border-radius);
-            background: rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.9);
             transition: var(--transition);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .hobby-item::before {
@@ -413,13 +420,13 @@
 
         .hobby-item:hover {
             color: white;
-            transform: translateY(-10px) scale(1.05);
+            transform: translateY(-8px) scale(1.03);
             box-shadow: var(--hover-shadow);
         }
         
         .hobby-icon {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
             background: var(--secondary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -440,16 +447,17 @@
             z-index: 2;
             font-weight: 600;
             letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
         /* Enhanced Experience Items */
         .experience-item {
-            padding: 25px;
-            border-left: 5px solid transparent;
+            padding: 20px;
+            border-left: 4px solid transparent;
             border-image: var(--success-gradient) 1;
-            margin-bottom: 25px;
-            background: rgba(255,255,255,0.8);
-            border-radius: 15px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 12px;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -460,7 +468,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 5px;
+            width: 4px;
             height: 100%;
             background: var(--success-gradient);
             transition: var(--transition);
@@ -474,18 +482,18 @@
         .experience-item:hover {
             background: white;
             box-shadow: var(--card-shadow);
-            transform: translateX(-10px) scale(1.02);
+            transform: translateX(-8px) scale(1.01);
         }
 
         /* Profile Summary Enhancement */
         .profile-summary {
-            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,249,250,0.9));
-            padding: 35px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,249,250,0.95));
+            padding: 25px;
             border-radius: var(--border-radius);
-            border-left: 6px solid transparent;
+            border-left: 5px solid transparent;
             border-image: var(--primary-gradient) 1;
-            font-size: 1.2rem;
-            line-height: 2;
+            font-size: 1.1rem;
+            line-height: 1.8;
             color: #495057;
             position: relative;
             overflow: hidden;
@@ -494,33 +502,48 @@
         .profile-summary::before {
             content: '"';
             position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 8rem;
+            top: -5px;
+            left: 15px;
+            font-size: 6rem;
             color: rgba(102, 126, 234, 0.1);
             font-family: Georgia, serif;
         }
 
         /* Education Enhancement */
         .education-item {
-            background: rgba(255,255,255,0.8);
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
             transition: var(--transition);
             border: 2px solid transparent;
         }
 
         .education-item:hover {
             border-color: rgba(102, 126, 234, 0.3);
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: var(--card-shadow);
+        }
+
+        /* Progress Bars */
+        .progress-bar-custom {
+            height: 6px;
+            border-radius: 8px;
+            background: var(--success-gradient);
+            transition: width 1s ease-in-out;
+        }
+
+        .progress-container {
+            background: rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
         }
 
         /* Advanced Animations */
         .fade-in {
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
@@ -531,7 +554,7 @@
 
         .slide-in-left {
             opacity: 0;
-            transform: translateX(-50px);
+            transform: translateX(-40px);
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -542,7 +565,7 @@
 
         .slide-in-right {
             opacity: 0;
-            transform: translateX(50px);
+            transform: translateX(40px);
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -554,45 +577,34 @@
         /* Floating Action Button */
         .fab {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
             background: var(--secondary-gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            font-size: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             transition: var(--transition);
             cursor: pointer;
             z-index: 1000;
+            border: none;
+            opacity: 0;
+            visibility: hidden;
         }
 
         .fab:hover {
             transform: scale(1.1) rotate(360deg);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .name-title h1 {
-                font-size: 2.8rem;
-            }
-            
-            .content-section {
-                padding: 40px 20px;
-            }
-            
-            .section-card {
-                padding: 25px;
-            }
-
-            .main-container {
-                margin: 20px;
-            }
+        .fab.visible {
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Loading Animation */
@@ -611,8 +623,8 @@
         }
 
         .loading-spinner {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border: 3px solid rgba(255,255,255,0.3);
             border-top: 3px solid white;
             border-radius: 50%;
@@ -627,6 +639,210 @@
         .hidden {
             opacity: 0;
             visibility: hidden;
+        }
+
+        /* Enhanced Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header-section {
+                padding: 40px 0 60px 0;
+            }
+
+            .profile-img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .name-title h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+            
+            .name-title h3 {
+                font-size: 1.3rem;
+            }
+            
+            .content-section {
+                padding: 40px 15px;
+            }
+            
+            .section-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .section-title i {
+                font-size: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 12px;
+                gap: 12px;
+                margin-bottom: 15px;
+            }
+
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .skill-tag {
+                padding: 8px 16px;
+                margin: 4px;
+                font-size: 12px;
+                display: block;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+
+            .hobby-item {
+                height: 100px;
+                padding: 15px;
+            }
+
+            .hobby-icon {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+
+            .hobby-item h6 {
+                font-size: 0.8rem;
+            }
+
+            .profile-summary {
+                padding: 20px;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .experience-item {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .education-item {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+
+            .fab {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .col-4 {
+                margin-bottom: 10px;
+            }
+
+            /* Better text readability on mobile */
+            body {
+                font-size: 14px;
+            }
+
+            .badge {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+
+            /* Adjust spacing for mobile */
+            .container-fluid, .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            /* Footer adjustments */
+            .footer-section {
+                padding: 20px 0 !important;
+                font-size: 0.9rem;
+            }
+
+            /* Progress bars mobile */
+            .progress-container {
+                margin-bottom: 15px;
+            }
+
+            .progress-bar-custom {
+                height: 8px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .name-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .name-title h3 {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hobby-item {
+                height: 90px;
+                padding: 10px;
+            }
+
+            .hobby-icon {
+                font-size: 1.8rem;
+            }
+
+            .skill-tag {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
+
+            .contact-item {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .contact-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 12px;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (orientation: landscape) and (max-height: 600px) {
+            .header-section {
+                padding: 30px 0 50px 0;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name-title h1 {
+                font-size: 2rem;
+            }
+
+            .name-title h3 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -729,205 +945,213 @@
                                 </div>
                             </div>
                         </div>
+<!-- Certifications -->
+<div class="section-card slide-in-right">
+    <h2 class="section-title">
+        <i class="fas fa-certificate"></i>
+        CERTIFICATIONS & ACHIEVEMENTS
+    </h2>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="skill-tag">
+                <i class="fas fa-computer"></i> International Computer Driving License (ICDL)
+            </div>
+            <div class="skill-tag">
+                <i class="fas fa-award"></i> Professional Development
+            </div>
+            <div class="skill-tag">
+                <i class="fas fa-handshake"></i> Community Service
+            </div>
+        </div>
+    </div>
+</div>
 
-                        <!-- Certifications -->
-                        <div class="section-card slide-in-right">
+<!-- Interests & Hobbies -->
+<div class="section-card fade-in">
+    <h2 class="section-title">
+        <i class="fas fa-heart"></i>
+        INTERESTS & HOBBIES
+    </h2>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-6">
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h6>SEO</h6>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h6>Technology</h6>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h6>Fitness</h6>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h6>Reading</h6>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h6>Photography</h6>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6">
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h6>Music</h6>
+            </div>
+        </div>
+    </div>
+</div>
 
-                            <h2 class="section-title">
-                                <i class="fas fa-certificate"></i>
-                                CERTIFICATIONS & ACHIEVEMENTS
-                            </h2>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="skill-tag">
-                                        <i class="fas fa-computer"></i> International Computer Driving License (ICDL)
-                                    </div>
-                                    <div class="skill-tag">
-                                        <i class="fas fa-award"></i> Professional Development
-                                    </div>
-                                    <div class="skill-tag">
-                                        <i class="fas fa-handshake"></i> Community Service
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- Professional Skills -->
+<div class="section-card slide-in-right">
+    <h2 class="section-title">
+        <i class="fas fa-tools"></i>
+        PROFESSIONAL SKILLS
+    </h2>
+    <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+            <span><i class="fas fa-users"></i> Human Resources Management</span>
+            <span>95%</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-custom" style="width: 95%"></div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+            <span><i class="fas fa-calculator"></i> Accounting & Finance</span>
+            <span>90%</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-custom" style="width: 90%"></div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+            <span><i class="fas fa-users-cog"></i> Team Leadership</span>
+            <span>88%</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-custom" style="width: 88%"></div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+            <span><i class="fas fa-chart-line"></i> Data Analysis</span>
+            <span>85%</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-custom" style="width: 85%"></div>
+        </div>
+    </div>
+</div>
+</div>
 
-                        <!-- Interests & Hobbies -->
-                        <div class="section-card fade-in">
-                            <h2 class="section-title">
-                                <i class="fas fa-heart"></i>
-                                INTERESTS & HOBBIES
-                            </h2>
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="hobby-item">
-                                        <div class="hobby-icon">
-                                            <i class="fas fa-search"></i>
-                                        </div>
-                                        <h6>SEO</h6>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="hobby-item">
-                                        <div class="hobby-icon">
-                                            <i class="fas fa-cogs"></i>
-                                        </div>
-                                        <h6>Technology</h6>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="hobby-item">
-                                        <div class="hobby-icon">
-                                            <i class="fas fa-dumbbell"></i>
-                                        </div>
-                                        <h6>Fitness</h6>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="hobby-item">
-                                        <div class="hobby-icon">
-                                            <i class="fas fa-book"></i>
-                                        </div>
-                                        <h6>Reading</h6>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="hobby-item">
-                                        <div class="hobby-icon">
-                                            <i class="fas fa-camera"></i>
-                                        </div>
-                                        <h6>Photography</h6>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="hobby-item">
-                                        <div class="hobby-icon">
-                                            <i class="fas fa-music"></i>
-                                        </div>
-                                        <h6>Music</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- Right Column -->
+<div class="col-lg-4">
+<!-- Contact Info -->
+<div class="section-card slide-in-right">
+    <h2 class="section-title">
+        <i class="fas fa-address-book"></i>
+        CONTACT INFO
+    </h2>
+    <div class="contact-item">
+        <div class="contact-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <div>
+            <strong>Ehab Sabry Abd EL-sayed</strong>
+            <small class="d-block text-muted">Full Name</small>
+        </div>
+    </div>
+    <div class="contact-item">
+        <div class="contact-icon">
+            <i class="fas fa-calendar"></i>
+        </div>
+        <div>
+            <strong>23.10.1997</strong>
+            <small class="d-block text-muted">Date of Birth</small>
+        </div>
+    </div>
+    <div class="contact-item" onclick="window.location.href='mailto:ehabsabry135@gmail.com'">
+        <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div>
+            <strong>ehabsabry135@gmail.com</strong>
+            <small class="d-block text-muted">Email Address</small>
+        </div>
+    </div>
+    <div class="contact-item" onclick="window.location.href='tel:+201119562345'">
+        <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+        </div>
+        <div>
+            <strong>+201119562345</strong>
+            <small class="d-block text-muted">Phone Number</small>
+        </div>
+    </div>
+    <div class="contact-item">
+        <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div>
+            <strong>Mubarak District</strong>
+            <small class="d-block text-muted">El-Ghad Library, Zagazig, Sharkia</small>
+        </div>
+    </div>
+</div>
 
-                        <!-- Professional Skills -->
-                        <div class="section-card slide-in-right">
-                            <h2 class="section-title">
-                                <i class="fas fa-tools"></i>
-                                PROFESSIONAL SKILLS
-                            </h2>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between mb-1">
-                                    <span><i class="fas fa-users"></i> Human Resources Management</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress-bar-custom" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between mb-1">
-                                    <span><i class="fas fa-calculator"></i> Accounting & Finance</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress-bar-custom" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between mb-1">
-                                    <span><i class="fas fa-users-cog"></i> Team Leadership</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress-bar-custom" style="width: 88%"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between mb-1">
-                                    <span><i class="fas fa-chart-line"></i> Data Analysis</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress-bar-custom" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column -->
-                    <div class="col-lg-4">
-                        <!-- Contact Info -->
-                        <div class="section-card slide-in-right">
-                            <h2 class="section-title">
-                                <i class="fas fa-address-book"></i>
-                                CONTACT INFO
-                            </h2>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                                <div>
-                                    <strong>Ehab Sabry Abd EL-sayed</strong>
-                                    <small class="d-block text-muted">Full Name</small>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-calendar"></i>
-                                </div>
-                                <div>
-                                    <strong>23.10.1997</strong>
-                                    <small class="d-block text-muted">Date of Birth</small>
-                                </div>
-                            </div>
-                            <div class="contact-item" onclick="window.location.href='mailto:ehabsabry135@gmail.com'">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <strong>ehabsabry135@gmail.com</strong>
-                                    <small class="d-block text-muted">Email Address</small>
-                                </div>
-                            </div>
-                            <div class="contact-item" onclick="window.location.href='tel:+201119562345'">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div>
-                                    <strong>+201119562345</strong>
-                                    <small class="d-block text-muted">Phone Number</small>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <strong>Mubarak District</strong>
-                                    <small class="d-block text-muted">El-Ghad Library, Zagazig, Sharkia</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Language Skills -->
-                        <div class="section-card fade-in">
-                            <h2 class="section-title">
-                                <i class="fas fa-language"></i>
-                                LANGUAGES
-                            </h2>
-                            <div class="skill-tag">
-                                <i class="fas fa-globe"></i> Arabic - Native
-                            </div>
-                            <div class="skill-tag">
-                                <i class="fas fa-globe-americas"></i> English - Fluent
-                            </div>
-                        </div>
+<!-- Language Skills -->
+<div class="section-card fade-in">
+    <h2 class="section-title">
+        <i class="fas fa-language"></i>
+        LANGUAGES
+    </h2>
+    <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+            <span><i class="fas fa-globe"></i> Arabic</span>
+            <span>Native</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-custom" style="width: 100%"></div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+            <span><i class="fas fa-globe-americas"></i> English</span>
+            <span>Fluent</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-custom" style="width: 90%"></div>
+        </div>
+    </div>
+</div>
 
 <!-- Computer Skills -->
 <div class="section-card slide-in-right">
-    <div class="container">
-
     <h2 class="section-title">
         <i class="fas fa-laptop-code"></i>
         TECHNICAL SKILLS
@@ -952,17 +1176,18 @@
     </div>
 </div>
 
-                    </div>
-                </div>
-            </div>
 
-        </div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- Footer Section -->
 <div class="footer-section text-center py-4" style="background: var(--dark-gradient); color: white;">
 <div class="container">
 <p class="mb-2">&copy; 2025 Ehab Sabry. All rights reserved.</p>
-<p class="mb-0" style="opacity: 0.8;">Designed with ❤️ Basem Ezzat ❤️</p>
+<p class="mb-0" style="opacity: 0.8;">Designed with ❤️ by Basem Ezzat ❤️</p>
+</div>
 </div>
 </div>
 
@@ -976,7 +1201,7 @@
 // Create animated particles
 function createParticles() {
 const particlesContainer = document.getElementById('particles');
-const particleCount = 50;
+const particleCount = window.innerWidth < 768 ? 20 : 50; // Fewer particles on mobile
 
 for (let i = 0; i < particleCount; i++) {
 const particle = document.createElement('div');
@@ -994,10 +1219,10 @@ function hideLoading() {
 const loading = document.getElementById('loading');
 setTimeout(() => {
 loading.classList.add('hidden');
-}, 1500);
+}, 1200); // Faster loading on mobile
 }
 
-// Fade in animation on scroll
+// Optimized fade in animation for mobile
 function fadeInElements() {
 const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
 const observer = new IntersectionObserver((entries) => {
@@ -1007,8 +1232,8 @@ entry.target.classList.add('visible');
 }
 });
 }, {
-threshold: 0.1,
-rootMargin: '0px 0px -50px 0px'
+threshold: window.innerWidth < 768 ? 0.05 : 0.1, // Lower threshold for mobile
+rootMargin: '0px 0px -30px 0px'
 });
 
 elements.forEach(element => {
@@ -1016,12 +1241,24 @@ observer.observe(element);
 });
 }
 
-// Contact item interactions
+// Enhanced contact item interactions for mobile
 function setupContactInteractions() {
 const contactItems = document.querySelectorAll('.contact-item');
 contactItems.forEach(item => {
+// Touch events for mobile
+item.addEventListener('touchstart', function() {
+this.style.transform = 'translateX(5px) scale(1.01)';
+});
+
+item.addEventListener('touchend', function() {
+setTimeout(() => {
+this.style.transform = 'translateX(0) scale(1)';
+}, 200);
+});
+
+// Mouse events for desktop
 item.addEventListener('mouseenter', function() {
-this.style.transform = 'translateX(10px) scale(1.02)';
+this.style.transform = 'translateX(8px) scale(1.02)';
 });
 
 item.addEventListener('mouseleave', function() {
@@ -1030,21 +1267,33 @@ this.style.transform = 'translateX(0) scale(1)';
 });
 }
 
-// Skill tags animation with stagger effect
+// Optimized skill tags animation for mobile
 function animateSkillTags() {
 const skillTags = document.querySelectorAll('.skill-tag');
 skillTags.forEach((tag, index) => {
-tag.style.animationDelay = `${index * 0.1}s`;
-tag.addEventListener('mouseenter', function() {
-this.style.transform = 'translateY(-8px) scale(1.1) rotate(2deg)';
+tag.style.animationDelay = `${index * 0.05}s`; // Faster animation on mobile
+
+tag.addEventListener('touchstart', function() {
+this.style.transform = 'translateY(-4px) scale(1.03)';
 });
+
+tag.addEventListener('touchend', function() {
+setTimeout(() => {
+this.style.transform = 'translateY(0) scale(1)';
+}, 200);
+});
+
+tag.addEventListener('mouseenter', function() {
+this.style.transform = 'translateY(-6px) scale(1.05) rotate(1deg)';
+});
+
 tag.addEventListener('mouseleave', function() {
 this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
 });
 });
 }
 
-// Progress bars animation
+// Progress bars animation with mobile optimization
 function animateProgressBars() {
 const progressBars = document.querySelectorAll('.progress-bar-custom');
 const observer = new IntersectionObserver((entries) => {
@@ -1054,22 +1303,36 @@ const width = entry.target.style.width;
 entry.target.style.width = '0%';
 setTimeout(() => {
     entry.target.style.width = width;
-}, 500);
+}, window.innerWidth < 768 ? 300 : 500); // Faster on mobile
 }
 });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 
 progressBars.forEach(bar => {
 observer.observe(bar);
 });
 }
 
-// Hobby items advanced interaction
+// Mobile-optimized hobby interactions
 function setupHobbyInteractions() {
 const hobbyItems = document.querySelectorAll('.hobby-item');
 hobbyItems.forEach(item => {
+// Touch events for mobile
+item.addEventListener('touchstart', function() {
+this.style.transform = 'translateY(-6px) scale(1.02)';
+this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+});
+
+item.addEventListener('touchend', function() {
+setTimeout(() => {
+this.style.transform = 'translateY(0) scale(1)';
+this.style.boxShadow = 'none';
+}, 300);
+});
+
+// Mouse events for desktop
 item.addEventListener('mouseenter', function() {
-this.style.transform = 'translateY(-15px) scale(1.08) rotate(2deg)';
+this.style.transform = 'translateY(-10px) scale(1.05) rotate(1deg)';
 this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)';
 });
 
@@ -1078,39 +1341,46 @@ this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
 this.style.boxShadow = 'none';
 });
 
-// Add click effect
+// Click/tap effect
 item.addEventListener('click', function() {
 this.style.transform = 'scale(0.95)';
 setTimeout(() => {
-this.style.transform = 'translateY(-15px) scale(1.08) rotate(2deg)';
-}, 150);
+if (window.innerWidth < 768) {
+    this.style.transform = 'translateY(-6px) scale(1.02)';
+} else {
+    this.style.transform = 'translateY(-10px) scale(1.05) rotate(1deg)';
+}
+}, 100);
 });
 });
 }
 
-// Enhanced ripple effect
+// Enhanced ripple effect with mobile optimization
 function addAdvancedRippleEffect() {
 const elements = document.querySelectorAll('.section-card, .hobby-item, .experience-item, .skill-tag');
 
 elements.forEach(element => {
-element.addEventListener('click', function(e) {
+function createRipple(e) {
 const ripple = document.createElement('span');
-const rect = this.getBoundingClientRect();
+const rect = element.getBoundingClientRect();
 const size = Math.max(rect.width, rect.height);
-const x = e.clientX - rect.left - size / 2;
-const y = e.clientY - rect.top - size / 2;
+const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left - size / 2;
+const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top - size / 2;
 
 ripple.style.width = ripple.style.height = size + 'px';
 ripple.style.left = x + 'px';
 ripple.style.top = y + 'px';
 ripple.classList.add('ripple');
 
-this.appendChild(ripple);
+element.appendChild(ripple);
 
 setTimeout(() => {
 ripple.remove();
 }, 600);
-});
+}
+
+element.addEventListener('click', createRipple);
+element.addEventListener('touchstart', createRipple);
 });
 }
 
@@ -1122,56 +1392,46 @@ behavior: 'smooth'
 });
 }
 
-// Show/hide FAB based on scroll position
+// Enhanced FAB visibility with mobile optimization
 function handleFABVisibility() {
 const fab = document.querySelector('.fab');
-window.addEventListener('scroll', () => {
-if (window.scrollY > 300) {
-fab.style.opacity = '1';
-fab.style.visibility = 'visible';
+let ticking = false;
+
+function updateFAB() {
+if (window.scrollY > (window.innerWidth < 768 ? 200 : 300)) {
+fab.classList.add('visible');
 } else {
-fab.style.opacity = '0';
-fab.style.visibility = 'hidden';
+fab.classList.remove('visible');
+}
+ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+if (!ticking) {
+requestAnimationFrame(updateFAB);
+ticking = true;
 }
 });
 }
 
-// Download CV function
-function setupDownloadButton() {
-const downloadBtn = document.querySelector('.download-btn');
-if (downloadBtn) {
-downloadBtn.addEventListener('click', function(e) {
-e.preventDefault();
-
-// Create a temporary message
-const originalText = this.innerHTML;
-this.innerHTML = '<i class="fas fa-check"></i> CV Ready for Download!';
-this.style.background = 'var(--success-gradient)';
-
-setTimeout(() => {
-this.innerHTML = originalText;
-this.style.background = 'var(--orange-gradient)';
-}, 2000);
-});
-}
-}
-
-// Parallax effect for header
+// Mobile-optimized parallax effect
 function setupParallaxEffect() {
+if (window.innerWidth > 768) { // Only on desktop
 window.addEventListener('scroll', () => {
 const scrolled = window.pageYOffset;
 const parallaxElement = document.querySelector('.header-section');
 if (parallaxElement) {
-const speed = scrolled * 0.5;
+const speed = scrolled * 0.3; // Reduced speed
 parallaxElement.style.transform = `translateY(${speed}px)`;
 }
 });
 }
+}
 
-// Typewriter effect for the name
+// Typewriter effect with mobile optimization
 function typewriterEffect() {
 const nameElement = document.querySelector('.name-title h1');
-if (nameElement) {
+if (nameElement && window.innerWidth > 768) { // Only on desktop
 const text = nameElement.textContent;
 nameElement.textContent = '';
 
@@ -1183,27 +1443,28 @@ i++;
 } else {
 clearInterval(timer);
 }
-}, 100);
+}, 80); // Faster typing
 }
 }
 
-// Mouse cursor trail effect
+// Simplified cursor trail for desktop only
 function setupCursorTrail() {
+if (window.innerWidth > 768 && !('ontouchstart' in window)) {
 let mouseX = 0, mouseY = 0;
 let trailElements = [];
 
-// Create trail elements
-for (let i = 0; i < 20; i++) {
+// Create fewer trail elements
+for (let i = 0; i < 10; i++) {
 const trail = document.createElement('div');
 trail.style.position = 'fixed';
-trail.style.width = '4px';
-trail.style.height = '4px';
-trail.style.background = 'rgba(102, 126, 234, 0.5)';
+trail.style.width = '3px';
+trail.style.height = '3px';
+trail.style.background = 'rgba(102, 126, 234, 0.4)';
 trail.style.borderRadius = '50%';
 trail.style.pointerEvents = 'none';
 trail.style.zIndex = '9999';
 trail.style.opacity = '0';
-trail.style.transition = 'all 0.3s ease';
+trail.style.transition = 'all 0.2s ease';
 document.body.appendChild(trail);
 trailElements.push(trail);
 }
@@ -1214,21 +1475,39 @@ mouseY = e.clientY;
 
 trailElements.forEach((trail, index) => {
 setTimeout(() => {
-trail.style.left = mouseX + 'px';
-trail.style.top = mouseY + 'px';
-trail.style.opacity = '1';
-trail.style.transform = `scale(${1 - index * 0.05})`;
+    trail.style.left = mouseX + 'px';
+    trail.style.top = mouseY + 'px';
+    trail.style.opacity = '1';
+    trail.style.transform = `scale(${1 - index * 0.1})`;
+    
+    setTimeout(() => {
+        trail.style.opacity = '0';
+    }, 150);
+}, index * 15);
+});
+});
+}
+}
 
-setTimeout(() => {
-    trail.style.opacity = '0';
-}, 200);
-}, index * 20);
-});
-});
+// Performance optimization for mobile
+function optimizeForMobile() {
+if (window.innerWidth < 768) {
+// Reduce animation complexity on mobile
+document.documentElement.style.setProperty('--transition', 'all 0.3s ease');
+
+// Disable some animations on very small screens
+if (window.innerWidth < 480) {
+const particles = document.getElementById('particles');
+if (particles) {
+particles.style.display = 'none';
+}
+}
+}
 }
 
 // Initialize all functions
 document.addEventListener('DOMContentLoaded', function() {
+optimizeForMobile();
 createParticles();
 hideLoading();
 fadeInElements();
@@ -1238,15 +1517,21 @@ animateProgressBars();
 setupHobbyInteractions();
 addAdvancedRippleEffect();
 handleFABVisibility();
-setupDownloadButton();
 setupParallaxEffect();
 setupCursorTrail();
 
 // Delayed typewriter effect
-setTimeout(typewriterEffect, 2000);
+setTimeout(typewriterEffect, 1500);
 });
 
-// Add CSS for ripple effect
+// Handle orientation change
+window.addEventListener('orientationchange', function() {
+setTimeout(() => {
+location.reload();
+}, 500);
+});
+
+// Add enhanced CSS for mobile
 const style = document.createElement('style');
 style.textContent = `
 .ripple {
@@ -1266,12 +1551,6 @@ opacity: 0;
 }
 }
 
-.fab {
-opacity: 0;
-visibility: hidden;
-transition: all 0.3s ease;
-}
-
 .section-card {
 position: relative;
 overflow: hidden;
@@ -1282,23 +1561,69 @@ position: relative;
 overflow: hidden;
 }
 
-/* Enhanced hover effects */
+/* Enhanced mobile touch feedback */
+@media (max-width: 768px) {
+.contact-item:active,
+.hobby-item:active,
+.skill-tag:active {
+background-color: rgba(0,0,0,0.05);
+}
+
+.btn:active {
+transform: scale(0.95);
+}
+
+/* Improve text selection on mobile */
+.contact-item div:last-child,
+.experience-item,
+.education-item {
+-webkit-user-select: text;
+user-select: text;
+}
+
+/* Better spacing for touch targets */
+.contact-item {
+min-height: 60px;
+}
+
+.hobby-item {
+min-height: 100px;
+}
+
+/* Improved readability */
+.text-muted {
+color: #666 !important;
+}
+
+.badge {
+margin: 2px;
+font-size: 10px;
+}
+}
+
+/* Enhanced hover effects for desktop */
+@media (min-width: 769px) {
 .btn:hover {
 transform: translateY(-2px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.badge {
-transition: all 0.3s ease;
-}
-
 .badge:hover {
 transform: scale(1.1);
+}
 }
 
 /* Smooth transitions for all interactive elements */
 * {
 transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Fix for iOS safari */
+@supports (-webkit-touch-callout: none) {
+.main-container {
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+}
 }
 `;
 document.head.appendChild(style);
